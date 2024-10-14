@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: K3sWordpressDeployemntMonitoring
+  name: k3s-wordpress-deployment-monitoring
   namespace: flux-system
 spec:
   interval: 1m0s
