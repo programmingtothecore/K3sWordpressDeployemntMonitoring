@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: wordpress:5.7
+        image: wordpress:5.9
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql.wordpress.svc.cluster.local:3306  # MySQL service name and port
