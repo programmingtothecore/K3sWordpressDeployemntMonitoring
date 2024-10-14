@@ -1,29 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mysql","namespace":"wordpress"},"spec":{"ports":[{"port":3306,"targetPort":3306}],"selector":{"app":"mysql"},"type":"ClusterIP"}}
-  creationTimestamp: "2024-10-08T03:10:18Z"
   name: mysql
   namespace: wordpress
-  resourceVersion: "26238"
-  uid: cb03531f-b7c0-4329-818f-81a90195b3ca
 spec:
-  clusterIP: 10.43.131.35
-  clusterIPs:
-  - 10.43.131.35
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
-  - port: 3306
-    protocol: TCP
-    targetPort: 3306
+    - port: 3306
+      targetPort: 3306
   selector:
     app: mysql
-  sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}
