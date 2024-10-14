@@ -32,4 +32,5 @@ spec:
         - name: WORDPRESS_DB_NAME
           value: wordpress  # Database name that you set in MySQL
         ports:
-        - containerPort: 80  # WordPress typically runs on port 80
+        - containerPort: 80
+        - nodePort: 30010  # WordPress typically runs on port 80
