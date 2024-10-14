@@ -9,5 +9,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: K3sWordpressDeployemntMonitoring
+    name: k3s-wordpress-deployment-monitoring
   targetNamespace: flux-system
