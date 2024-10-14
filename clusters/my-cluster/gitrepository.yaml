@@ -8,5 +8,3 @@ spec:
   url: https://github.com/programmingtothecore/K3sWordpressDeployemntMonitoring  # Your GitHub repo URL
   ref:
     branch: main  # Correct field to specify the branch
-  secretRef:
-    name: flux-system  # This is only needed if your repo is private
