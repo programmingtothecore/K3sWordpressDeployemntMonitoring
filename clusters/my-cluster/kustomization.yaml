@@ -1,13 +1,8 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+# This file should be in your repository under ./clusters/my-cluster/
+apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: wordpress-kustomization
-  namespace: flux-system
-spec:
-  interval: 5m0s
-  path: "./"
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: k3s-wordpress-deployment-monitoring
-  targetNamespace: flux-system
+resources:
+  - wordpress-deployment.yaml
+  - mysql-deployment.yaml
+  - wordpress-service.yaml
+  - mysql-service.yaml

@@ -1,5 +1,13 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
-resources:
-- gotk-components.yaml
-- gotk-sync.yaml
+metadata:
+  name: wordpress-kustomization
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: "./clusters/my-cluster"  # Make sure this path is correct
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: k3s-wordpress-deployment-monitoring
+  targetNamespace: flux-system
