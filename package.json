@@ -1,12 +1,12 @@
 {
     "name": "k3s-wordpress-deployment-monitoring",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "private": true,
     "scripts": {
-      "release": "release-it"
+        "release": "release-it"
     },
     "devDependencies": {
-      "release-it": "^15.0.0",
-      "@release-it/conventional-changelog": "^5.0.0"
+        "release-it": "^15.0.0",
+        "@release-it/conventional-changelog": "^5.0.0"
     }
-  }
+}
